@@ -1,11 +1,64 @@
-/* 
+.paper {
+  background: #fff;
+  box-shadow:
+    /* The top layer shadow */
+    0 1px 1px rgba(0,0,0,0.15),
+    /* The second layer */
+    0 10px 0 -5px #eee,
+    /* The second layer shadow */
+    0 10px 1px -4px rgba(0,0,0,0.15),
+     /* The third layer */
+    0 20px 0 -10px #eee,
+    /* The third layer shadow */
+    0 20px 1px -9px rgba(0,0,0,0.15);
+    /* Padding for demo purposes */
+    padding: 30px;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+body {
+  background-color:rgb(206, 206, 206);
+  padding: 2em;
+}
+.lista {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* 👈 importante */
+}
 
-*/
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #e5e5e5;
+    background: white; /* 👈 igual que el fondo */
+}
+
+.item:hover {
+    background: #f1f1f1;
+}
+
+.btn-delete {
+    background: transparent;
+    border: none;
+    color: #ff4d4d;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+/* Mostrar solo al hacer hover */
+.item:hover .btn-delete {
+    opacity: 1;
+}
+
+/* Efecto al pasar el mouse */
+.btn-delete:hover {
+    color: #ff0000;
+    transform: scale(1.2);
+}
+
+h1{
+  text-align: center;
+}
